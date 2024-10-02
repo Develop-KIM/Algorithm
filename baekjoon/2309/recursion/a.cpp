@@ -19,7 +19,7 @@ void print(){
 }
 void makePermutation(int n, int r, int depth){
     if(r == depth){
-        print();
+        solve();
         return;
     }
     for(int i=depth; i<n; i++){
