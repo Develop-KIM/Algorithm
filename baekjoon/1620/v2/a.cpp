@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int N, M;
-stirng str;
+string str;
 map<string, int> mapStr;
 map<int, string> mapInt;
 
@@ -24,14 +24,10 @@ int main(){
             }
         }
 
-        if (isNumber) {
-            // 숫자인 경우 해당 번호에 해당하는 포켓몬 이름 출력
-            cout << mapInt[stoi(str)] << '\n';
-        } 
-        if(isdigit(str[0])) cout << mapInt[stoi(str)] << '\n';
+        if (isNumber) cout << mapInt[stoi(str)] << '\n';
         else{
-            if(islower(str)) str[0] = toupper(str[0]);
-            cout << mapStr[stoi(str)] << '\n'; 
+            if(islower(str[0])) str[0] = toupper(str[0]);
+            cout << mapStr[str] << '\n'; 
         }
     }
 }
