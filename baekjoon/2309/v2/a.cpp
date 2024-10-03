@@ -1,29 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-int a[9], sum;
-vector<int> v;
+int arr[9], sum;
 pair<int, int> ret;
+vector<int> v;
+
 void solve(){
     for(int i=0; i<9; i++){
         for(int j=0; j<i; j++){
-            if(sum - a[i] - a[j] == 100){
-                ret = {i, j};
-                return;
-            }
+            if(sum - arr[i] - arr[j] == 100) 
+            ret = {i, j};
         }
     }
 }
 
 int main(){
     for(int i=0; i<9; i++){
-        cin >> a[i]; sum+= a[i];
+        cin >> arr[i]; sum += arr[i];
     }
     solve();
     for(int i=0; i<9; i++){
         if(ret.first == i || ret.second == i) continue;
-        v.push_back(a[i]);
+        v.push_back(arr[i]);
     }
     sort(v.begin(), v.end());
-    for(int i : v) cout << i << "\n";
-    return 0;
+    for(int i : v) cout << i << '\n';
 }
