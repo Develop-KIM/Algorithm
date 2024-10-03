@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int a[3] = {1, 2, 3};
-int n = 3, r = 3;
+int n = 4, r = 3;
 void print(){
     for(int i=0; i<r; i++){
         cout << a[i] << " ";
