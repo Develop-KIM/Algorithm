@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int A, B, C, a, b, cnt[104], ret;
+int A, B, C, a, b, cnt[101], ret;
 
 int main(){
     cin >> A >> B >> C;
@@ -10,13 +10,12 @@ int main(){
         for(int j=a; j<b; j++) cnt[j]++;
     }
 
-    for(int j=1; j<100; j++){
-        if(cnt[j]){
-            if(cnt[j] == 1) ret += A;
-            else if(cnt[j] == 2) ret += B * 2;
-            else if(cnt[j] == 3) ret += C * 3;
+    for(int i=1; i<=100; i++){
+        if(cnt[i]){
+            if(cnt[i] == 1) ret += A;
+            else if(cnt[i] == 2) ret += B*2;
+            else if(cnt[i] == 3) ret += C*3;
         }
     }
     cout << ret;
-    return 0;
 }
