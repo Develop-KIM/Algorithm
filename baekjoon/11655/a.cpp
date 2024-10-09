@@ -1,19 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-string str;
+string str, temp;
 
 int main(){
-    getline(cin, str);
+    cin >> str;
+    temp = str;
 
-    for(int i=0; i<str.size(); i++){
-        if(str[i] >= 'A' && str[i] <= 'Z') {
-            if(str[i] + 13 > 90) str[i] -= 13;
-            else str[i] = str[i] + 13;
-        } else if(str[i] >= 'a' && str[i] <= 'z') {
-            if(str[i] + 13 > 122) str[i] -= 13;
-            else str[i] = str[i] + 13;
-        }
-        cout << str[i];
-    }
-    return 0;
+    reverse(temp.begin(), temp.end());
+    if(str == temp) cout << 1;
+    else cout << 0;
 }
