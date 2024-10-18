@@ -8,7 +8,7 @@ ll go(ll A, ll B){
     ll ret = go(A, B/2);
     ret = (ret * ret) % C;
     if(B % 2) ret = (ret * A) % C;
-    return;
+    return ret;
 }
 
 int main(){
