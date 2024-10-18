@@ -1,3 +1,5 @@
+// 짝짓기, 폭발이 나오면 stack을 생각하자
+
 #include <bits/stdc++.h>
 using namespace std;
 int N, ret;
