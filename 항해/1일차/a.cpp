@@ -13,10 +13,8 @@ bool solution(string s)
         } else if(ch == 'y' || ch == 'Y'){
             y++;
         }
-        if(p == y){
-            answer = true;
-        } else{
-            answer = false;
+        if(p != y){
+            return answer = false;
         }
     }
     return answer;
